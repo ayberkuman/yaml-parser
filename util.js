@@ -1,4 +1,4 @@
-// Function to apply actions
+// Function to iterate and apply all actions
 export function applyActions(actions) {
   actions.forEach((action) => {
     try {
@@ -52,7 +52,7 @@ export function insertElement(position, target, element) {
   const targetEl = document.querySelector(target);
   if (targetEl) {
     targetEl.insertAdjacentHTML(
-      position === "after" ? "beforeend" : "beforebegin",
+      position === "after" ? "beforeend" : "beforebegin", // Used beforeend for after because in the example target tag was body and I did not want to alter tags outside the body
       element
     );
   } else {

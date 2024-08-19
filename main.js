@@ -23,7 +23,7 @@ async function fetchAndParseYAML(url) {
 // Main function to run the parser
 async function runParser() {
   try {
-    const config = await fetchAndParseYAML("/actions.yaml");
+    const config = await fetchAndParseYAML("/actions.yaml"); //Edit this line to correctly point to your config yaml file
     if (config.actions.length > 0) {
       applyActions(config.actions);
     } else {

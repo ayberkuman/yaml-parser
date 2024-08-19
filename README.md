@@ -28,7 +28,7 @@ This JavaScript application dynamically modifies a webpage based on configuratio
 
    - Place the JavaScript files (`main.js`, `parser.js`, `util.js`) in your `scripts` directory.
    - Create an `actions.yaml` file that contains your desired DOM manipulation actions.
-   - Ensure your HTML file (e.g., `index.html`) includes the following script tag:
+   - Ensure your HTML file (e.g., `index.html`) includes the following script tag inside the head tag:
 
      ```html
      <script type="module" src="/scripts/main.js"></script>
@@ -46,7 +46,7 @@ This JavaScript application dynamically modifies a webpage based on configuratio
    - Replace `/your-path/actions.yaml` with the correct path to your YAML file.
 
 3. **Run the Application**
-   - Serve your HTML file via a web server (e.g., `http-server` or `Live Server` in VSCode).
+   - Serve your HTML file via a web server (You can try with `Live Server` in VSCode).
    - The application will fetch the YAML configuration, parse it, and apply the specified actions to the webpage.
 
 ### Example
