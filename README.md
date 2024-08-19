@@ -14,7 +14,7 @@ This JavaScript application dynamically modifies a webpage based on configuratio
 ```
 /project-root
 │
-├── /scripts
+├── /your-path
 │ ├── main.js
 │ ├── parser.js
 │ └── util.js
@@ -26,17 +26,17 @@ This JavaScript application dynamically modifies a webpage based on configuratio
 
 1. **Set Up the Project**
 
-   - Place the JavaScript files (`main.js`, `parser.js`, `util.js`) in your `scripts` directory.
+   - Place the JavaScript files (`main.js`, `parser.js`, `util.js`) in your desired directory.
    - Create an `actions.yaml` file that contains your desired DOM manipulation actions.
-   - Ensure your HTML file (e.g., `index.html`) includes the following script tag inside the head tag:
+   - Ensure your HTML file (e.g., `index.html`) includes the following script tag inside the head tag and correctly points to the `main.js` file:
 
      ```html
-     <script type="module" src="/scripts/main.js"></script>
+     <script type="module" src="/your-path/main.js"></script>
      ```
 
 2. **Edit the Configuration Path**
 
-   - Open the `main.js` file located in the `scripts` directory.
+   - Open the `main.js` file.
    - On line 26, update the path to your YAML configuration file. For example:
 
      ```javascript

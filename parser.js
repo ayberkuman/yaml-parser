@@ -26,7 +26,7 @@ export function parseYAML(yamlText) {
     else if (line && currentAction) {
       const [key, value] = line.split(":").map((s) => s.trim());
       if (!key || value === undefined) {
-        console.error("Malformed key-value pair in YAML:", line);
+        console.error("Incorrect key-value pair in YAML:", line);
         continue; // skip this line if key-value pair is not correctly specified
       }
       currentAction[key] = value.replace(/^["']|["']$/g, "");
