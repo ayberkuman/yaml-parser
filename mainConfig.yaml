@@ -6,7 +6,7 @@ datasource:
 
   urls:
     /products: A.yaml
-    /orders: B.yaml
+    /orders: [A.yaml, B.yaml]
 
   hosts:
     example.com: A.yaml

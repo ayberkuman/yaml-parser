@@ -9,5 +9,5 @@ position: "after"
 target: "body"
 element: "<footer>Footer Content</footer>"
 - type: alter
-oldValue: "Machine Learning"
+oldValue: "A"
 newValue: "B"
