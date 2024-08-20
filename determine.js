@@ -1,6 +1,6 @@
 // Determine applicable configuration files based on current page, URL, or host
 export async function determineConfigFiles(config) {
-  const currentUrl = window.location.pathname.replace(/\.html$/, "");
+  const currentUrl = window.location.pathname.replace(/\.[^\/]+$/, "");
   const currentHost = window.location.hostname;
   let applicableFiles = [];
 
