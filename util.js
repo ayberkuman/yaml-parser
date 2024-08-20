@@ -1,6 +1,11 @@
+import { PRIORITIES } from "./constants.js";
 // Function to iterate and apply all actions
 export function applyActions(actions) {
-  actions.forEach((action) => {
+  const sortedActionsByPriority = actions
+    .slice()
+    .sort((a, b) => PRIORITIES[a.type] - PRIORITIES[b.type]); // Sort by action type priority
+
+  sortedActionsByPriority.forEach((action) => {
     try {
       switch (action.type) {
         case "remove":
