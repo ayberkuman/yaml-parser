@@ -1,13 +1,13 @@
 datasource:
   pages:
-    list: A.yaml
-    details: B.yaml
-    cart: [A.yaml, B.yaml]
+    list: orders.yaml
+    details: products.yaml
+    cart: products.yaml
 
   urls:
-    /products: A.yaml
-    /orders: [A.yaml, B.yaml]
+    /products: products.yaml
+    /orders: [orders.yaml, products.yaml]
 
   hosts:
-    example.com: A.yaml
-    another.com: B.yaml
+    example.com: orders.yaml
+    another.com: products.yaml

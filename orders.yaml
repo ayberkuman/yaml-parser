@@ -10,4 +10,4 @@ target: "body"
 element: "<footer>Footer Content</footer>"
 - type: alter
 oldValue: "Machine Learning"
-newValue: "A"
+newValue: "orders"

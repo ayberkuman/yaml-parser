@@ -1,5 +1,4 @@
-import { parseYAML } from "./parser.js";
-import { parseDataSourceYAML } from "./datasourceParser.js";
+import { parseYAML, parseDataSourceYAML } from "./parser.js";
 import { applyActions } from "./util.js";
 import { determineConfigFiles } from "./determine.js";
 
@@ -27,13 +26,11 @@ async function runParser() {
   try {
     // Fetch and parse the main config file
     const mainConfig = await fetchAndParseYAML("/mainConfig.yaml", true);
-
     // Determine which config files are applicable
     const configFiles = await determineConfigFiles(mainConfig);
-console.log(configFiles);
     // Fetch, parse, and apply actions from each config file
     for (const file of configFiles) {
-      const fileConfig = await fetchAndParseYAML(file, false); // Assume these are action configs
+      const fileConfig = await fetchAndParseYAML(file, false); // These are action configs only
       if (fileConfig.actions && fileConfig.actions.length > 0) {
         applyActions(fileConfig.actions);
       } else {
